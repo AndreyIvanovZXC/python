@@ -1,0 +1,5 @@
+print("введите 2 числа")
+one = int(input())
+two = int(input())
+print(one+two)
+print(one*two)
