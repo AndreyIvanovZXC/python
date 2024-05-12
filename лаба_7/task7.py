@@ -1,6 +1,6 @@
 a = input("Введите строку:")
 count = 0
-vowels = set("aeiou")
+vowels = str("aeiou")
 for letter in a:
     if letter in vowels:
         count += 1
