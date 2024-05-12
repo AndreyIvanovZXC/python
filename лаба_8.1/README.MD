@@ -27,8 +27,8 @@
 ## Задача №3
 Удалите из кода строку return 'Я поняла, это вопрос про города!': на этом месте вам нужно написать код, который создаст перечень городов из словаря DATABASE (города в этом перечне не должны повторяться); вернёт фразу Твои друзья в городах: <город_1> <город_2> <город_3> … (города должны перечисляться через пробел).
 
-\```python
-DATABASE = {
+\\```python
+DATABASE \= \{
     'Серёга': 'Омск',
     'Соня': 'Москва',
     'Миша': 'Москва',
@@ -36,32 +36,27 @@ DATABASE = {
     'Алина': 'Красноярск',
     'Егор': 'Пермь',
     'Коля': 'Красноярск'
-}
+\}
 
-def process_anfisa(query):
-    if query == 'Сколько у меня друзей?':
-        count = len(DATABASE)
-        return 'У тебя ' + str(count) + ' друзей.'
-    # Здесь проверьте, что переменная query равна строке 'Кто все мои друзья?'
-    elif query == "Кто все мои друзья?":
-        friends_string = ''
-        # Чтобы получить перечень друзей - 
-        # переберите словарь DATABASE в цикле
+def process\_anfisa\(query\):
+    if query \=\= 'Сколько у меня друзей?':
+        count \= len\(DATABASE\)
+        return 'У тебя ' \+ str\(count\) \+ ' друзей\.'
+    elif query \=\= "Кто все мои друзья?":
+        friends\_string \= ''
         for key in DATABASE:     
-             friends_string += key + " "     # Добавляйте к переменной friends_string имя друга и пробел
-        # Верните строку, составленную из 'Твои друзья: ' и friends_string 
-        return print('Твои друзья: ', str(friends_string))  
-    elif query == "Где все мои друзья":
-        city_string = ''
-        for value in set(DATABASE.values()):
-            city_string += str(value) + " " 
-        return print ("Твои друзья в городах: ", str(city_string))
+             friends\_string \+\= key \+ " "
+        return print\('Твои друзья: ', str\(friends\_string\)\)  
+    elif query \=\= "Где все мои друзья":
+        city\_string \= ''
+        for value in set\(DATABASE\.values\(\)\):
+            city\_string \+\= str\(value\) \+ " " 
+        return print \("Твои друзья в городах: ", str\(city\_string\)\)
     else:
-        return '<неизвестный запрос>'
+        return '<неизвестный запрос\>'
 
-# Не изменяйте следующий код
-print('Привет, я Анфиса!')
-print(process_anfisa('Сколько у меня друзей?'))
-print(process_anfisa('Кто все мои друзья?'))
-print(process_anfisa("Где все мои друзья"))
-\```
+print\('Привет, я Анфиса\!'\)
+print\(process\_anfisa\('Сколько у меня друзей?'\)\)
+print\(process\_anfisa\('Кто все мои друзья?'\)\)
+print\(process\_anfisa\("Где все мои друзья"\)\)
+\\\\```
